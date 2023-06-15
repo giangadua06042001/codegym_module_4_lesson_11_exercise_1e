@@ -10,22 +10,22 @@ public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long c_id;
-    private String category;
-  @OneToMany(mappedBy = "categoryName")
+    private String categoryName;
+  @OneToMany(mappedBy = "category")
   @JsonIgnore
     private List<Posts> posts;
 
     public Category() {
     }
 
-    public Category(Long c_id, String category, List posts) {
+    public Category(Long c_id, String categoryName, List posts) {
         this.c_id = c_id;
-        this.category = category;
+        this.categoryName = categoryName;
         this.posts = posts;
     }
 
-    public Category(String category, List posts) {
-        this.category = category;
+    public Category(String categoryName, List posts) {
+        this.categoryName = categoryName;
         this.posts = posts;
     }
 
@@ -37,12 +37,12 @@ public class Category {
         this.c_id = c_id;
     }
 
-    public String getCategory() {
-        return category;
+    public String getCategoryName() {
+        return categoryName;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setCategoryName(String category) {
+        this.categoryName = category;
     }
 
     public List getPosts() {

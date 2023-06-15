@@ -12,7 +12,7 @@ public class Posts {
     private String author;
     private String description;
     @ManyToOne
-    private Category categoryName;
+    private Category category;
 
     public Posts(Long id, String name, String author, String description) {
         this.id = id;
@@ -32,12 +32,12 @@ public class Posts {
         this.description = description;
     }
 
-    public Category getCategoryName() {
-        return categoryName;
+    public Category getCategory() {
+        return category;
     }
 
-    public void setCategoryName(Category category) {
-        this.categoryName = category;
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     public Long getId() {
