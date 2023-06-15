@@ -1,5 +1,6 @@
 package com.example.exercise_1.service.posts;
 
+import com.example.exercise_1.model.Category;
 import com.example.exercise_1.model.Posts;
 import com.example.exercise_1.repository.PostsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,5 +25,11 @@ public class PostsService implements IPostsService{
     public Posts save(Posts posts) {
        return postsRepository.save(posts);
 
+    }
+
+
+    @Override
+    public Iterable<Posts> findAllByCategory(Category category) {
+        return postsRepository.findAllByCategory(category);
     }
 }

@@ -35,6 +35,6 @@ public class CategoryController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<>(category.get(), HttpStatus.OK);
-    }
 
+    }
 }

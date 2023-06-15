@@ -1,6 +1,5 @@
 package com.example.exercise_1.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -13,7 +12,7 @@ public class Posts {
     private String author;
     private String description;
     @ManyToOne
-    private Category category;
+    private Category categoryName;
 
     public Posts(Long id, String name, String author, String description) {
         this.id = id;
@@ -33,12 +32,12 @@ public class Posts {
         this.description = description;
     }
 
-    public Category getCategory() {
-        return category;
+    public Category getCategoryName() {
+        return categoryName;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setCategoryName(Category category) {
+        this.categoryName = category;
     }
 
     public Long getId() {
